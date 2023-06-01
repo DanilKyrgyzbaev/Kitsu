@@ -9,4 +9,8 @@ java {
 }
 dependencies {
     implementation(libs.coroutines.core)
+    implementation(libs.squareup.retrofit)
+    implementation(libs.squareup.retrofitConverterGson)
+    implementation(libs.squareup.okHttp)
+    implementation(libs.squareup.loggingInterceptor)
 }

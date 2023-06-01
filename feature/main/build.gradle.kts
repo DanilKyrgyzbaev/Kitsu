@@ -1,6 +1,7 @@
 plugins {
     id(libs.plugins.agp.library.get().pluginId)
     id(libs.plugins.kotlin.kotlin.get().pluginId)
+    id(libs.plugins.jetBrains.kotlin.gradle.get().pluginId)
 }
 
 android {
@@ -37,6 +38,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
     misc.versions.apply {
         // Modules
         implementation(project(coreProjectPath.get()))
