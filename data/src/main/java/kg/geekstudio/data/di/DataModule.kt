@@ -2,8 +2,11 @@ package kg.geekstudio.data.di
 
 import com.squareup.moshi.Moshi
 import kg.geekstudio.data.apiservices.AnimeApiService
+import kg.geekstudio.data.apiservices.AuthApiService
 import kg.geekstudio.data.remoteData.AnimeRepositoryImpl
+import kg.geekstudio.data.remoteData.AuthRepositoryImpl
 import kg.geekstudio.domain.repository.AnimeRepository
+import kg.geekstudio.domain.repository.AuthRepository
 import kg.geekstudio.kitsu.data.BuildConfig.BASE_URL
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import okhttp3.OkHttpClient
@@ -20,7 +23,8 @@ private const val TIME_OUT = 30L
 @ExperimentalTime
 @ExperimentalCoroutinesApi
 val dataModule = module {
-    single { createService(get()) }
+    single { createAnimeService(get()) }
+    single { createAutService(get()) }
 
     single { createRetrofit(get(), BASE_URL ) }
 
@@ -31,6 +35,7 @@ val dataModule = module {
     single { Moshi.Builder().build() }
 
     single<AnimeRepository> { AnimeRepositoryImpl(apiService = get()) }
+    single<AuthRepository> { AuthRepositoryImpl(authApiService = get()) }
 }
 
 fun createOkHttpClient(): OkHttpClient {
@@ -49,6 +54,10 @@ fun createRetrofit(okHttpClient: OkHttpClient, url: String): Retrofit {
         .addConverterFactory(GsonConverterFactory.create()).build()
 }
 
-fun createService(retrofit: Retrofit): AnimeApiService {
+fun createAnimeService(retrofit: Retrofit): AnimeApiService {
     return retrofit.create(AnimeApiService::class.java)
+}
+
+fun createAutService(retrofit: Retrofit): AuthApiService {
+    return retrofit.create(AuthApiService::class.java)
 }

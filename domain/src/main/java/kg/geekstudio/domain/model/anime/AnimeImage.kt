@@ -1,4 +1,4 @@
-package kg.geekstudio.domain.model
+package kg.geekstudio.domain.model.anime
 
 data class AnimeImage(
     val tiny: String,

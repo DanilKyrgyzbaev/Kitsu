@@ -6,4 +6,5 @@
     <string name="welcome_kitsu">Welcome Kitsu!</string>
     <string name="manga">Manga</string>
     <string name="anime">Anime</string>
+    <string name="error_field_is_required">Обязательное поле для заполнения.</string>
 </resources>

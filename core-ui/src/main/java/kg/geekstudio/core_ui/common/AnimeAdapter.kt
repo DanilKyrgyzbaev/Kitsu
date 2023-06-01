@@ -5,9 +5,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import kg.geekstudio.core_ui.extensions.loadImageWithGlide
-import kg.geekstudio.domain.model.AnimeData
+import kg.geekstudio.domain.model.anime.AnimeData
 import kg.geekstudio.kitsu.core_ui.databinding.AnimeItemBinding
 
 class AnimeAdapter(private val anime: ArrayList<AnimeData>, private val context: Context): RecyclerView.Adapter<AnimeViewHolder>() {

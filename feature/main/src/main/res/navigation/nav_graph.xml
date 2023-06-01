@@ -11,12 +11,12 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/signinFragment2"
+        android:id="@+id/signinFragment"
         android:name="kg.geekstudio.main.ui.signin.SigninFragment"
         android:label="fragment_signin"
         tools:layout="@layout/fragment_signin" >
         <action
-            android:id="@+id/action_signinFragment2_to_homeFragment"
+            android:id="@+id/action_signinFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

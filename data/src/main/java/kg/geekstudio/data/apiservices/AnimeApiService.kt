@@ -1,6 +1,6 @@
 package kg.geekstudio.data.apiservices
 
-import kg.geekstudio.domain.model.AnimeModel
+import kg.geekstudio.domain.model.anime.AnimeModel
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.create

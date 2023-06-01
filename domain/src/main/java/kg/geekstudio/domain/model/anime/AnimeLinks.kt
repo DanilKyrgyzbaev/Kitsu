@@ -1,4 +1,4 @@
-package kg.geekstudio.domain.model
+package kg.geekstudio.domain.model.anime
 
 data class AnimeLinks(
     val self: String

@@ -3,6 +3,7 @@ package kg.geekstudio.kitsu
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
+import kg.geekstudio.data.local.TokenPreferences
 import kg.geekstudio.kitsu.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +21,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupListener() {
         val graph = navController.navInflater.inflate(R.navigation.nav_graph)
-        graph.setStartDestination(R.id.homeFragment)
+
+        if (TokenPreferences.userAccessToken.isNotEmpty()){
+            graph.setStartDestination(R.id.homeFragment)
+        }
+        graph.setStartDestination(R.id.signinFragment)
         navController.graph = graph
     }
 }

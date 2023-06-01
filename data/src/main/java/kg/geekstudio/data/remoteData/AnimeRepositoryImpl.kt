@@ -2,7 +2,7 @@ package kg.geekstudio.data.remoteData
 
 import kg.geekstudio.core.util.ResultStatus
 import kg.geekstudio.data.apiservices.AnimeApiService
-import kg.geekstudio.domain.model.AnimeData
+import kg.geekstudio.domain.model.anime.AnimeData
 import kg.geekstudio.domain.repository.AnimeRepository
 import java.lang.Exception
 

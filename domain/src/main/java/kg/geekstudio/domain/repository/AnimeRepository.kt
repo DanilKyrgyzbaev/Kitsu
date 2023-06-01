@@ -1,7 +1,7 @@
 package kg.geekstudio.domain.repository
 
 import kg.geekstudio.core.util.ResultStatus
-import kg.geekstudio.domain.model.AnimeData
+import kg.geekstudio.domain.model.anime.AnimeData
 
 interface AnimeRepository {
     suspend fun getAnime(): ResultStatus<List<AnimeData>>

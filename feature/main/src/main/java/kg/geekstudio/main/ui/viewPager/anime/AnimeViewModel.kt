@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import kg.geekstudio.core.util.ResultStatus
 import kg.geekstudio.core_ui.base.BaseViewModel
 import kg.geekstudio.core_ui.state.UIState
-import kg.geekstudio.domain.model.AnimeData
+import kg.geekstudio.domain.model.anime.AnimeData
 import kg.geekstudio.domain.useCase.GetAnimeUseCase
 import kotlinx.coroutines.launch
 

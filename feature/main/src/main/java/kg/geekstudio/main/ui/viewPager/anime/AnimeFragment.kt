@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kg.geekstudio.core_ui.base.BaseFragment
 import kg.geekstudio.core_ui.common.AnimeAdapter
 import kg.geekstudio.core_ui.state.UIState
+import kg.geekstudio.data.local.TokenPreferences
 import kg.geekstudio.kitsu.main.databinding.FragmentAnimeBinding
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.koin.androidx.viewmodel.ext.android.viewModel
