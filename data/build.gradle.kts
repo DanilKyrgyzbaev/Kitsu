@@ -43,7 +43,13 @@ dependencies {
         implementation(project(domainProjectPath.get()))
         implementation(project(coreProjectPath.get()))
     }
-
+    //Retrofit
+    implementation(libs.squareup.retrofit)
+    implementation(libs.squareup.retrofitConverterGson)
+    implementation(libs.squareup.okHttp)
+    implementation(libs.squareup.loggingInterceptor)
+    implementation(libs.squareup.converterMoshi)
+    implementation(libs.squareup.moshiKotlin)
     // coroutine
     implementation(libs.coroutines.core)
     implementation(libs.coroutines.android)
