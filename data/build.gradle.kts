@@ -57,4 +57,8 @@ dependencies {
     // koin
     implementation(libs.koin.core)
 
+    // paging3
+    implementation(libs.paging.runtime)
+    implementation(libs.paging.common)
+
 }

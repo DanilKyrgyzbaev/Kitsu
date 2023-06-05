@@ -1,16 +1,14 @@
 package kg.geekstudio.data.remoteData
 
 import kg.geekstudio.core.util.ResultStatus
-import kg.geekstudio.data.apiservices.AnimeApiService
-import kg.geekstudio.domain.model.anime.AnimeData
-import kg.geekstudio.domain.repository.AnimeRepository
-import java.lang.Exception
+import kg.geekstudio.data.apiservices.MangaApiServise
+import kg.geekstudio.domain.model.manga.MangaItem
+import kg.geekstudio.domain.repository.MangaRepository
 
-class AnimeRepositoryImpl(private val animeApiService: AnimeApiService): AnimeRepository {
-
-    override suspend fun getAnime(limit: Int, offset: Int): ResultStatus<List<AnimeData>>{
+class MangaRepositoryImpl(private val mangaapiServise: MangaApiServise): MangaRepository{
+    override suspend fun getManga(): ResultStatus<List<MangaItem>> {
         return try {
-            val response = animeApiService.getAnime(limit, offset)
+            val response = mangaapiServise.getManga()
             if(response.isSuccessful){
                 val animeResponse = response.body()
                 animeResponse?.data?.let {

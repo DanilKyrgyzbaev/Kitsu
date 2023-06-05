@@ -4,5 +4,5 @@ import kg.geekstudio.core.util.ResultStatus
 import kg.geekstudio.domain.model.anime.AnimeData
 
 interface AnimeRepository {
-    suspend fun getAnime(): ResultStatus<List<AnimeData>>
+    suspend fun getAnime(limit: Int, offset: Int): ResultStatus<List<AnimeData>>
 }

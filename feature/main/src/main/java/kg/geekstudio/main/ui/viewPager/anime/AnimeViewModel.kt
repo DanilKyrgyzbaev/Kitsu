@@ -17,7 +17,7 @@ class AnimeViewModel(private val getAnimeUseCase: GetAnimeUseCase) : BaseViewMod
 
     fun fetchAnime() {
         viewModelScope.launch {
-            val result = getAnimeUseCase()
+            val result = getAnimeUseCase(20,5)
             when(result){
                 is ResultStatus.Success ->{
                     val animeDataList = result.data ?: emptyList()

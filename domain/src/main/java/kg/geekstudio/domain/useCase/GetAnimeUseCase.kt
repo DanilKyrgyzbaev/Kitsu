@@ -5,7 +5,7 @@ import kg.geekstudio.domain.model.anime.AnimeData
 import kg.geekstudio.domain.repository.AnimeRepository
 
 class GetAnimeUseCase (private val animeRepository: AnimeRepository){
-    suspend operator fun invoke(): ResultStatus<List<AnimeData>> {
-        return animeRepository.getAnime()
+    suspend operator fun invoke(limit: Int, offset: Int): ResultStatus<List<AnimeData>> {
+        return animeRepository.getAnime(limit,offset)
     }
 }

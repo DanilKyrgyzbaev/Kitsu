@@ -1,0 +1,33 @@
+package kg.geekstudio.domain.model.manga
+
+data class MangaAttributes(
+    val createdAt: String,
+    val updatedAt: String,
+    val slug: String,
+    val synopsis: String,
+    val description: String,
+    val coverImageTopOffset: Int,
+    val titles: MangaTitles,
+    val canonicalTitle: String,
+    val abbreviatedTitles: List<String>,
+    val averageRating: String?,
+    val ratingFrequencies: Map<String, String>,
+    val userCount: Int,
+    val favoritesCount: Int,
+    val startDate: String,
+    val endDate: String?,
+    val nextRelease: String?,
+    val popularityRank: Int,
+    val ratingRank: Int,
+    val ageRating: String?,
+    val ageRatingGuide: String?,
+    val subtype: String,
+    val status: String,
+    val tba: String?,
+    val posterImage: MangaPosterImage,
+    val coverImage: Any?,
+    val chapterCount: Int,
+    val volumeCount: Int,
+    val serialization: String,
+    val mangaType: String
+)

@@ -24,8 +24,9 @@ class MainActivity : AppCompatActivity() {
 
         if (TokenPreferences.userAccessToken.isNotEmpty()){
             graph.setStartDestination(R.id.homeFragment)
+        }else {
+            graph.setStartDestination(R.id.signinFragment)
         }
-        graph.setStartDestination(R.id.signinFragment)
         navController.graph = graph
     }
 }
