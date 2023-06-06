@@ -1,0 +1,68 @@
+package kg.geekstudio.data.model.manga
+
+import kg.geekstudio.data.maper.DataMapper
+import kg.geekstudio.domain.model.manga.MangaAttributes
+
+data class MangaAttributesDto(
+    val createdAt: String,
+    val updatedAt: String,
+    val slug: String,
+    val synopsis: String,
+    val description: String,
+    val coverImageTopOffset: Int,
+    val titles: MangaTitlesDto,
+    val canonicalTitle: String,
+    val abbreviatedTitles: List<String>,
+    val averageRating: String?,
+    val ratingFrequencies: Map<String, String>,
+    val userCount: Int,
+    val favoritesCount: Int,
+    val startDate: String,
+    val endDate: String?,
+    val nextRelease: String?,
+    val popularityRank: Int,
+    val ratingRank: Int,
+    val ageRating: String?,
+    val ageRatingGuide: String?,
+    val subtype: String,
+    val status: String,
+    val tba: String?,
+    val posterImage: MangaPosterImageDto,
+    val coverImage: Any?,
+    val chapterCount: Int,
+    val volumeCount: Int,
+    val serialization: String,
+    val mangaType: String
+) : DataMapper<MangaAttributes> {
+    override fun toDomain() = MangaAttributes(
+        createdAt,
+        updatedAt,
+        slug,
+        synopsis,
+        description,
+        coverImageTopOffset,
+        titles.toDomain(),
+        canonicalTitle,
+        abbreviatedTitles,
+        averageRating,
+        ratingFrequencies,
+        userCount,
+        favoritesCount,
+        startDate,
+        endDate,
+        nextRelease,
+        popularityRank,
+        ratingRank,
+        ageRating,
+        ageRatingGuide,
+        subtype,
+        status,
+        tba,
+        posterImage.toDomain(),
+        coverImage,
+        chapterCount,
+        volumeCount,
+        serialization,
+        mangaType
+    )
+}

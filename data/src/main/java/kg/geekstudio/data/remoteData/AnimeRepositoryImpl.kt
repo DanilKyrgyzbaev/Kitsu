@@ -24,3 +24,14 @@ class AnimeRepositoryImpl(private val animeApiService: AnimeApiService): AnimeRe
         }
     }
 }
+
+//class BooksRepositoryImpl(
+//    private val bookService: BooksApiService
+//) : BooksRepository, BaseRepository() {
+//    override fun getBooks(
+//        query: String,
+//        maxResult: Int
+//    ): Flow<Resource<List<BooksLibrary>>> = doReguest {
+//        listOf(bookService.bookSearch(query, maxResult).toDomain())
+//    }
+//}
